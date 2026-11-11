@@ -1,0 +1,13 @@
+{
+  "task_id": "task-thinkr-build",
+  "task_description": "Build Thinkr — a premium AI study companion for Indian students (Class 6-10). React+Vite+TypeScript+Tailwind+Framer Motion+Dexie+pdfjs+Tesseract+MiniSearch+Recharts+KaTeX. PWA with Netlify edge function proxy to Groq/OpenRouter. Full 19-phase implementation: design system, data layer, SVG assets, layout, landing page, onboarding, library, chat/tutor, study/quiz, marks card analysis, progress/report card, daily planner, voice tutor, gamification, demo mode, profile, architecture page, Netlify proxy, final config.",
+  "status": "pending",
+  "feature_order": [
+    "FEAT-001",
+    "FEAT-002",
+    "FEAT-003",
+    "FEAT-004",
+    "FEAT-005"
+  ],
+  "blocked_reason": null
+}

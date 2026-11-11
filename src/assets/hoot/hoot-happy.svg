@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Hoot happy">
+  <!-- Ear tufts -->
+  <ellipse cx="38" cy="20" rx="7" ry="12" fill="#FF6B00" transform="rotate(-15 38 20)"/>
+  <ellipse cx="82" cy="20" rx="7" ry="12" fill="#FF6B00" transform="rotate(15 82 20)"/>
+  <ellipse cx="38" cy="20" rx="4" ry="8" fill="#FFE8D6" transform="rotate(-15 38 20)"/>
+  <ellipse cx="82" cy="20" rx="4" ry="8" fill="#FFE8D6" transform="rotate(15 82 20)"/>
+
+  <!-- Head -->
+  <circle cx="60" cy="58" r="38" fill="#FF6B00"/>
+  <circle cx="60" cy="58" r="34" fill="#FFF7F0"/>
+
+  <!-- Eyes: happy crescents curved upward -->
+  <circle cx="45" cy="54" r="12" fill="white" stroke="#FF6B00" stroke-width="2"/>
+  <circle cx="75" cy="54" r="12" fill="white" stroke="#FF6B00" stroke-width="2"/>
+  <!-- Glasses bridge -->
+  <line x1="57" y1="54" x2="63" y2="54" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Happy eyes — large pupils, eye shine -->
+  <circle cx="45" cy="54" r="6" fill="#1A1208"/>
+  <circle cx="75" cy="54" r="6" fill="#1A1208"/>
+  <circle cx="47" cy="52" r="2.5" fill="white"/>
+  <circle cx="77" cy="52" r="2.5" fill="white"/>
+
+  <!-- Happy eyelid curves (curved upward) -->
+  <path d="M35 48 Q45 42 55 48" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M65 48 Q75 42 85 48" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Big crescent smile -->
+  <path d="M46 68 Q60 80 74 68" stroke="#FF6B00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Beak -->
+  <path d="M56 64 Q60 70 64 64" fill="#FF8A00" stroke="#FF6B00" stroke-width="1"/>
+
+  <!-- Wings raised in happy pose -->
+  <ellipse cx="22" cy="68" rx="12" ry="20" fill="#FF6B00" transform="rotate(-30 22 68)"/>
+  <ellipse cx="22" cy="68" rx="7" ry="13" fill="#FFE8D6" transform="rotate(-30 22 68)"/>
+
+  <ellipse cx="98" cy="68" rx="12" ry="20" fill="#FF6B00" transform="rotate(30 98 68)"/>
+  <ellipse cx="98" cy="68" rx="7" ry="13" fill="#FFE8D6" transform="rotate(30 98 68)"/>
+
+  <!-- Belly -->
+  <ellipse cx="60" cy="78" rx="18" ry="12" fill="#FFE8D6"/>
+</svg>

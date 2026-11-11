@@ -1,0 +1,43 @@
+{
+  "id": "FEAT-005",
+  "type": "chore",
+  "description": "Final configuration, accessibility pass, PWA optimization, README, and production readiness. Covers plan Phase 19. Depends on all prior FEATs being complete. This FEAT touches configuration files and applies accessibility improvements across all components without changing any user-visible functionality.",
+  "status": "pending",
+  "steps": [
+    "Vite config final: Update vite.config.ts — add build.rollupOptions.output.manualChunks splitting: recharts chunk (['recharts']), pdfWorker chunk (['pdfjs-dist']), tesseract chunk (['tesseract.js']), vendor chunk (['react','react-dom','react-router-dom','framer-motion','zustand','dexie']). Update VitePWA manifest: add maskable icon entry {src:'/icons/icon-512.png', sizes:'512x512', type:'image/png', purpose:'any maskable'}. Keep ROLLUP_WASM=true.",
+
+    "Tailwind config final: Verify tailwind.config.js has darkMode:['selector','[data-theme=\"dark\"]']. Add safelist for dynamic classes used in gamification and status badges: ['text-success','text-warning','text-danger','bg-success','bg-warning','bg-danger','border-success','border-warning','border-danger']. Confirm all CSS variable color mappings are present.",
+
+    "HTML and PWA meta: Update index.html — add <link rel='apple-touch-icon' href='/icons/icon-192.png'>, add <meta name='theme-color' content='#FF6B00'>, add <meta name='mobile-web-app-capable' content='yes'>, confirm <meta name='description'> is present. Create public/icons/icon-192.png and icon-512.png: since we cannot run native image tools, create an SVG-based workaround — add additional PWA manifest entries for SVG icons with purpose:'any maskable' in vite.config.ts, and document in README that PNG icons can be generated from favicon.svg using any SVG-to-PNG converter (e.g. Squoosh or Inkscape).",
+
+    "Print stylesheet: Create src/styles/print.css (@media print rules). Import in src/index.css. Rules: * { -webkit-print-color-adjust: exact; } body { background: white; color: black; } .no-print { display: none !important; } #report-card { display: block !important; padding: 20px; font-family: 'Plus Jakarta Sans', sans-serif; } sidebar, bottom-tab-bar, header nav buttons all hidden in print. Add id='report-card' to ReportCard component wrapper div.",
+
+    "Accessibility pass: Review and update ALL interactive components: (1) Every Button, IconButton: ensure aria-label when no visible text, e.g. VoiceInputButton aria-label='Voice input', ThemeToggle aria-label='Toggle theme'. (2) All form inputs: ensure <label> association via htmlFor/id. (3) All modal/dialog: Radix Dialog already handles focus trap and aria-modal; confirm aria-labelledby pointing to dialog title. (4) SourceChip, ModeChip, LevelChip: role='button' or use <button>, aria-pressed for toggle state. (5) ChatWindow: add aria-live='polite' on the message container so screen readers announce new messages. (6) BottomTabBar: add role='tablist', each tab role='tab', aria-selected. (7) All SVG icons: aria-hidden='true' on decorative icons. (8) All images (Hoot SVGs): alt='Hoot the owl mascot' or appropriate description. (9) Focus rings: add focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 to all interactive elements missing it. (10) Keyboard navigation: Sidebar should close on Escape, FlashcardDeck should respond to ArrowLeft/ArrowRight/Space keys. (11) Color contrast: verify orange (#FF6B00) on white meets 3:1 for large text (AA for large) — for body text on orange buttons use white (#FFFFFF) which passes. (12) Lang attribute: in ThemeProvider (or App.tsx), set document.documentElement.lang = appStore.language === 'hi' ? 'hi' : 'en' on language change.",
+
+    "Reduced motion: Add useReducedMotion() check to ALL Framer Motion animation components. Create a utility hook src/hooks/useReducedMotion.ts that wraps Framer Motion's useReducedMotion and returns a boolean. In each animated component: const shouldReduceMotion = useReducedMotion(); pass to animate/transition props or skip AnimatePresence. At minimum update: HeroSection word reveal, FeatureGrid stagger, HowItWorksSection slide, Onboarding slide transitions, FlashcardDeck flip, ChatBubble entrance, AchievementToast slide, ConfettiOverlay (skip confetti entirely).",
+
+    "README and .env.example: Create README.md — sections: Thinkr tagline + description, Features list (all 19 phases), Tech stack table, Setup (clone, npm install, cp .env.example .env, fill env vars, npm run dev), Netlify dev setup (netlify dev for edge functions), Environment variables table (all 6 with descriptions), Build (npm run build), Deploy (Netlify — connect repo, set env vars in dashboard, deploy button), Privacy note (files never leave device), Contributing note. Create .env.example with all 6 env vars and inline comments: LLM_PRIMARY_BASE_URL=https://api.groq.com/openai/v1, LLM_PRIMARY_API_KEY=your_groq_key_here, LLM_PRIMARY_MODEL=moonshotai/kimi-k2-instruct (note: keep as env var since free model lists change), LLM_FALLBACK_BASE_URL=https://openrouter.ai/api/v1, LLM_FALLBACK_API_KEY=your_openrouter_key_here, LLM_FALLBACK_MODEL=mistralai/mistral-7b-instruct:free.",
+
+    "Final build verification: Run npm run build:typecheck and confirm 0 errors. Run npm run build and confirm dist/ is produced. Run npm run preview and load http://localhost:4173 — confirm: landing page renders, theme toggle works in both modes, /onboarding route loads the wizard, /app/home redirects to /onboarding when no profile exists, demo mode banner appears and exits correctly. Record any remaining issues in FEAT-005 findings field."
+  ],
+  "acceptance_criteria": [
+    "npm run build:typecheck exits with 0 TypeScript errors",
+    "npm run build produces dist/ without errors, with separate vendor/recharts/pdfWorker/tesseract chunks visible in dist/assets/",
+    "npm run preview serves the app at localhost:4173 without console errors",
+    "index.html contains apple-touch-icon, theme-color meta, and mobile-web-app-capable",
+    "All interactive elements have aria-label or visible text labels",
+    "ChatWindow message container has aria-live='polite'",
+    "document.documentElement.lang changes when user switches language",
+    "Framer Motion animations skip or simplify when prefers-reduced-motion media query is set",
+    "README.md exists with setup instructions, env var table, and deploy steps",
+    ".env.example contains all 6 LLM environment variable names with comments",
+    "print.css hides navigation elements and shows only report-card section when printing"
+  ],
+  "verification": [
+    "cd 'C:\\Users\\PALLAVI M\\Desktop\\Thinkr' && npm run build:typecheck",
+    "cd 'C:\\Users\\PALLAVI M\\Desktop\\Thinkr' && npm run build",
+    "cd 'C:\\Users\\PALLAVI M\\Desktop\\Thinkr' && npm run preview"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

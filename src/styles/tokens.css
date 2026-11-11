@@ -1,0 +1,72 @@
+/*
+ * Thinkr Design Tokens
+ * Light mode in :root, dark mode in [data-theme="dark"]
+ * All values referenced by tailwind.config.js via CSS variables
+ */
+
+:root {
+  /* Backgrounds */
+  --bg: #FFFFFF;
+  --surface: #FFFFFF;
+  --elevated: #FFF1E6;
+  --section-bg: #FFF7F0;
+
+  /* Borders */
+  --border: #F3DFCF;
+
+  /* Text */
+  --text: #1A1208;
+  --text-muted: #6B5B4D;
+
+  /* Brand */
+  --primary: #FF6B00;
+  --primary-hover: #E85D04;
+  --primary-soft: #FFE8D6;
+
+  /* Semantic */
+  --success: #16A34A;
+  --warning: #F59E0B;
+  --danger: #DC2626;
+
+  /* Shadows — soft diffuse in light mode */
+  --shadow-sm: 0 1px 3px rgba(26, 18, 8, 0.08), 0 1px 2px rgba(26, 18, 8, 0.04);
+  --shadow-md: 0 4px 12px rgba(26, 18, 8, 0.10), 0 2px 4px rgba(26, 18, 8, 0.06);
+  --shadow-lg: 0 10px 30px rgba(26, 18, 8, 0.12), 0 4px 8px rgba(26, 18, 8, 0.08);
+
+  /* Brand gradient stops (exposed for JS use) */
+  --gradient-brand-start: #FF8A00;
+  --gradient-brand-end: #FF5A00;
+
+  /* Transitions */
+  --transition-theme: 200ms ease;
+}
+
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg: #0A0A0A;
+  --surface: #141414;
+  --elevated: #1E1E1E;
+  --section-bg: #111111;
+
+  /* Borders */
+  --border: #2B2B2B;
+
+  /* Text */
+  --text: #F5F5F5;
+  --text-muted: #A3A3A3;
+
+  /* Brand */
+  --primary: #FF7A1A;
+  --primary-hover: #FF8F40;
+  --primary-soft: #2A1A0D;
+
+  /* Semantic */
+  --success: #4ADE80;
+  --warning: #FBBF24;
+  --danger: #F87171;
+
+  /* Shadows — thin border + glow in dark mode */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(43, 43, 43, 0.6);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(43, 43, 43, 0.6);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(43, 43, 43, 0.6);
+}

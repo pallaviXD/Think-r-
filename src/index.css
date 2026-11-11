@@ -1,3 +1,10 @@
+/* Import design tokens (CSS variables for both themes) */
+@import './styles/tokens.css';
+
+/* Import global resets, scrollbar, selection, texture, KaTeX */
+@import './styles/global.css';
+
+/* Tailwind directives — must come after imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

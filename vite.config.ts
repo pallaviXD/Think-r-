@@ -42,6 +42,23 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  // Dev proxy: forward /groq/* to Groq API to avoid CORS issues in local dev
+  server: {
+    proxy: {
+      '/groq': {
+        target: 'https://api.groq.com',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/groq/, ''),
+        secure: true,
+      },
+      '/openrouter': {
+        target: 'https://openrouter.ai',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/openrouter/, ''),
+        secure: true,
+      },
+    },
+  },
   optimizeDeps: {
     exclude: ['tesseract.js'],
   },

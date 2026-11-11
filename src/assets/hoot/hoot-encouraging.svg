@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Hoot encouraging">
+  <!-- Ear tufts -->
+  <ellipse cx="38" cy="20" rx="7" ry="12" fill="#FF6B00" transform="rotate(-15 38 20)"/>
+  <ellipse cx="82" cy="20" rx="7" ry="12" fill="#FF6B00" transform="rotate(15 82 20)"/>
+  <ellipse cx="38" cy="20" rx="4" ry="8" fill="#FFE8D6" transform="rotate(-15 38 20)"/>
+  <ellipse cx="82" cy="20" rx="4" ry="8" fill="#FFE8D6" transform="rotate(15 82 20)"/>
+
+  <!-- Head — slight forward lean -->
+  <circle cx="60" cy="58" r="38" fill="#FF6B00"/>
+  <circle cx="60" cy="58" r="34" fill="#FFF7F0"/>
+
+  <!-- Eyes: confident, slightly squinted -->
+  <circle cx="45" cy="54" r="12" fill="white" stroke="#FF6B00" stroke-width="2"/>
+  <circle cx="75" cy="54" r="12" fill="white" stroke="#FF6B00" stroke-width="2"/>
+  <!-- Glasses bridge -->
+  <line x1="57" y1="54" x2="63" y2="54" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+
+  <circle cx="45" cy="54" r="5.5" fill="#1A1208"/>
+  <circle cx="75" cy="54" r="5.5" fill="#1A1208"/>
+  <circle cx="47" cy="52" r="2" fill="white"/>
+  <circle cx="77" cy="52" r="2" fill="white"/>
+
+  <!-- Confident eyebrows -->
+  <path d="M36 44 Q45 40 54 44" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M66 44 Q75 40 84 44" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Confident smile -->
+  <path d="M48 68 Q60 76 72 68" stroke="#FF6B00" stroke-width="2.5" fill="#FFE8D6" stroke-linecap="round"/>
+
+  <!-- Beak -->
+  <path d="M56 65 Q60 71 64 65" fill="#FF8A00" stroke="#FF6B00" stroke-width="1"/>
+
+  <!-- Right wing pointing upward / thumbs-up gesture -->
+  <ellipse cx="96" cy="52" rx="10" ry="20" fill="#FF6B00" transform="rotate(20 96 52)"/>
+  <ellipse cx="96" cy="52" rx="6" ry="13" fill="#FFE8D6" transform="rotate(20 96 52)"/>
+  <!-- Thumb up symbol -->
+  <path d="M94 38 Q98 32 102 36 Q104 40 98 42" stroke="#FF6B00" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Left wing at side -->
+  <ellipse cx="26" cy="78" rx="10" ry="16" fill="#FF6B00" transform="rotate(5 26 78)"/>
+  <ellipse cx="26" cy="78" rx="6" ry="10" fill="#FFE8D6" transform="rotate(5 26 78)"/>
+
+  <!-- Belly -->
+  <ellipse cx="60" cy="78" rx="18" ry="12" fill="#FFE8D6"/>
+
+  <!-- Star sparkles for encouraging effect -->
+  <path d="M18 32 L20 28 L22 32 L18 32 Z" fill="#FF8A00" opacity="0.7"/>
+  <path d="M100 20 L102 15 L104 20 L100 20 Z" fill="#FF6B00" opacity="0.6"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Hoot thinking">
+  <!-- Ear tufts -->
+  <ellipse cx="38" cy="20" rx="7" ry="12" fill="#FF6B00" transform="rotate(-15 38 20)"/>
+  <ellipse cx="82" cy="20" rx="7" ry="12" fill="#FF6B00" transform="rotate(15 82 20)"/>
+  <ellipse cx="38" cy="20" rx="4" ry="8" fill="#FFE8D6" transform="rotate(-15 38 20)"/>
+  <ellipse cx="82" cy="20" rx="4" ry="8" fill="#FFE8D6" transform="rotate(15 82 20)"/>
+
+  <!-- Head (round) -->
+  <circle cx="60" cy="58" r="38" fill="#FF6B00"/>
+  <circle cx="60" cy="58" r="34" fill="#FFF7F0"/>
+
+  <!-- Slight head tilt — the head is rotated slightly for thinking expression -->
+
+  <!-- Eyes: round with orange glasses frames -->
+  <circle cx="45" cy="55" r="12" fill="white" stroke="#FF6B00" stroke-width="2"/>
+  <circle cx="75" cy="55" r="12" fill="white" stroke="#FF6B00" stroke-width="2"/>
+  <!-- Glasses bridge -->
+  <line x1="57" y1="55" x2="63" y2="55" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Pupils (looking up-right for thinking) -->
+  <circle cx="47" cy="52" r="5" fill="#1A1208"/>
+  <circle cx="77" cy="52" r="5" fill="#1A1208"/>
+  <!-- Eye shine -->
+  <circle cx="49" cy="50" r="2" fill="white"/>
+  <circle cx="79" cy="50" r="2" fill="white"/>
+
+  <!-- Beak -->
+  <path d="M56 65 Q60 70 64 65" fill="#FF8A00" stroke="#FF6B00" stroke-width="1"/>
+
+  <!-- Wing on chin (thinking pose) -->
+  <ellipse cx="78" cy="80" rx="15" ry="10" fill="#FF6B00" transform="rotate(-20 78 80)"/>
+  <ellipse cx="78" cy="80" rx="10" ry="6" fill="#FFE8D6" transform="rotate(-20 78 80)"/>
+
+  <!-- Left wing down -->
+  <ellipse cx="28" cy="82" rx="12" ry="18" fill="#FF6B00" transform="rotate(10 28 82)"/>
+  <ellipse cx="28" cy="82" rx="7" ry="12" fill="#FFE8D6" transform="rotate(10 28 82)"/>
+
+  <!-- Thought bubble -->
+  <circle cx="95" cy="30" r="4" fill="#FF6B00" opacity="0.4"/>
+  <circle cx="102" cy="22" r="6" fill="#FF6B00" opacity="0.5"/>
+  <circle cx="110" cy="13" r="8" fill="#FF6B00" opacity="0.6"/>
+  <text x="104" y="17" font-size="8" fill="white" font-family="sans-serif" font-weight="bold" text-anchor="middle">?</text>
+
+  <!-- Belly -->
+  <ellipse cx="60" cy="78" rx="18" ry="12" fill="#FFE8D6"/>
+</svg>
