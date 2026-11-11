@@ -40,7 +40,7 @@ function getProviders(userApiKey?: string) {
   const primary = {
     name: 'groq',
     baseUrl: process.env.LLM_PRIMARY_BASE_URL ?? 'https://api.groq.com/openai/v1',
-    apiKey: userApiKey || process.env.LLM_PRIMARY_API_KEY ?? '',
+    apiKey: userApiKey || (process.env.LLM_PRIMARY_API_KEY ?? ''),
     model: process.env.LLM_PRIMARY_MODEL ?? 'llama-3.3-70b-versatile',
   }
 
